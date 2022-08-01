@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  /* font-size: 15px; */
+}
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 6%, 90%);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--Very-Light-Gray);
+}
+
+.container .cont {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .cont .top {
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.container .cont .top h1 {
+  color: var(--Very-Dark-Blue);
+  margin: 0;
+  font-weight: 200;
+}
+
+.container .cont .top span {
+  font-weight: 600;
+}
+
+.container .cont .top p {
+  color: var(--Grayish-Blue);
+  font-weight: 200;
+  margin: 20px 0;
+}
+
+.container .cont .bot {
+  display: flex;
+  flex-direction: row;
+  margin: 30px auto 0;
+}
+
+.container .cont .bot .columm-one,
+.columm-two,
+.columm-three {
+  margin: auto;
+}
+
+.container .cont .bot .supervisor,
+.team-builder,
+.karma,
+.calculator {
+  background: white;
+  width: 330px;
+  max-height: 200px;
+  min-height: 200px;
+  padding: 30px;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 2px 10px rgba(143, 143, 143, 0.123);
+}
+
+.container .cont .bot h2 {
+  font-weight: 600;
+  color: var(--Very-Dark-Blue);
+  margin: 0;
+  font-size: 18px;
+}
+
+.container .cont .bot p {
+  font-size: 15px;
+  color: var(--Grayish-Blue);
+  margin-top: 8px;
+  font-size: 12px;
+  margin-right: 35px;
+}
+
+.container .cont .bot .columm-two {
+  margin: 0 30px;
+}
+
+.container .cont .bot img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 64px;
+  height: 64px;
+  margin: 30px;
+}
+
+.container .cont .bot .supervisor {
+  border-top: 5px solid var(--Cyan);
+}
+
+.container .cont .bot .team-builder {
+  margin-bottom: 30px;
+  border-top: 5px solid var(--Red);
+}
+
+.container .cont .bot .karma {
+  border-top: 5px solid var(--Orange);
+}
+
+.container .cont .bot .calculator {
+  border-top: 5px solid var(--Blue);
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .container .cont .bot {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 30px;
+    grid-template-areas:
+      "a b"
+      "c b";
+  }
+
+  .columm-one {
+    grid-area: a;
+  }
+
+  .container .cont .bot .columm-two {
+    grid-area: b;
+    margin: auto;
+  }
+
+  .columm-three {
+    grid-area: c;
+  }
+
+  .container .cont .bot img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 56px;
+    height: 56px;
+    margin: 15px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container .cont .bot {
+    display: none;
+  }
+
+  .container {
+    height: 250px;
+  }
+
+  .container .cont .top {
+    width: 100%;
+    padding: 0 30px;
+  }
+  .mobile {
+    display: flex;
+    justify-content: center;
+    background: var(--Very-Light-Gray);
+  }
+
+  .mobile .bot {
+    margin: 0 auto 50px;
+  }
+
+  .mobile .bot .columm-one,
+  .columm-two,
+  .columm-three {
+    margin: auto;
+  }
+
+  .mobile .bot .supervisor,
+  .team-builder,
+  .karma,
+  .calculator {
+    background: white;
+    width: 330px;
+    max-height: 200px;
+    min-height: 200px;
+    padding: 30px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 2px 10px rgba(143, 143, 143, 0.123);
+  }
+
+  .mobile .bot h2 {
+    font-weight: 600;
+    color: var(--Very-Dark-Blue);
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .mobile .bot p {
+    font-size: 15px;
+    color: var(--Grayish-Blue);
+    margin-top: 8px;
+    font-size: 12px;
+    margin-right: 35px;
+  }
+
+  .mobile .bot .columm-two {
+    margin: 20px auto;
+  }
+
+  .mobile .bot img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    margin: 30px;
+  }
+
+  .mobile .bot .supervisor {
+    border-top: 5px solid var(--Cyan);
+  }
+
+  .mobile .bot .team-builder {
+    margin-bottom: 30px;
+    border-top: 5px solid var(--Red);
+  }
+
+  .bot .karma {
+    border-top: 5px solid var(--Orange);
+  }
+
+  .mobile .bot .calculator {
+    border-top: 5px solid var(--Blue);
+  }
+}
+
+@media (max-width: 500px) {
+  .container .cont .top {
+    padding: 0 15px;
+  }
+
+  .container .cont .top h1 {
+    font-size: 25px;
+  }
+}
